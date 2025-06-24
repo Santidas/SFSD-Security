@@ -1,0 +1,139 @@
+
+:root {
+  --bg: #0c0f1a;
+  --surface: #111827;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --accent: #00ffe0;
+  --muted: #94a3b8;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.nav-links a {
+  color: var(--text);
+  margin: 0 1rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(145deg, #0c0f1a, #1e293b);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 0 10px rgba(0, 255, 224, 0.08);
+}
+
+.feature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 224, 0.3);
+}
+
+input, textarea {
+  width: 100%;
+  background: var(--surface);
+  border: none;
+  color: var(--text);
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: #0c0f1a;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 255, 224, 0.4);
+  transition: all var(--transition);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 255, 224, 0.7);
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid var(--card);
+  color: var(--muted);
+}
